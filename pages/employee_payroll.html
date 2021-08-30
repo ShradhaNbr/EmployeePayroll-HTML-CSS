@@ -4,15 +4,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../CSS/stylesheet.css">
+        <link rel="stylesheet" href="../css/stylesheet.css">
         <title>Employee payroll form</title>
+        <!--UC 8-->
         <script src="../js/Form.js"></script>
+        <!--UC 9-->
         <script src="../js/EmployeePayrollData.js"></script>
     </head>
     <body>
+        <!--Uc 1-->
         <header class="header-content header">
             <div class="logo-content">
-                <img src="../Assets/images/logo.png" alt="">
+                <img src="../assets/images/logo.png" alt="">
                 <div>
                     <span class="emp-text">EMPLOYEE</span><br>
                     <span class="emp-text emp-payroll">PAYROLL</span><br>
@@ -21,6 +24,7 @@
         </header>
         <br>
         <div class="form-content">
+            <!--UC 2-->
             <form class="form" action="#" onreset="resetForm()" onsubmit="save()">
                 <div class="form-head">
                     Employee Payroll Form
@@ -28,29 +32,32 @@
                 <div class="row-content">
                     <label class="label text" for="name">Name</label>
                     <input class="input" type="text" id="name" name="name" placeholder="Your name" required>
+                    <!--UC 10-->
                     <error-output class="text-error" for="text"></error-output>
                 </div>
+                <!--UC 3-->
                 <div class="row-content">
                     <label class="label text" for="profile">Profile Image</label>
                     <div class="profile-radio-content">
                         <label>
                             <input type="radio" id="profile1" name="profile" value="../assets/profile-images/Ellipse -3.png">
-                            <img class="profile" id="image1" src="../Assets/profile-images/Ellipse -3.png">
+                            <img class="profile" id="image1" src="../assets/profile-images/Ellipse -3.png">
                         </label>
                         <label>
                             <input type="radio" id="profile2" name="profile" value="../assets/profile-images/Ellipse 1.png">
-                            <img class="profile" id="image2" src="../Assets/profile-images/Ellipse 1.png">
+                            <img class="profile" id="image2" src="../assets/profile-images/Ellipse 1.png">
                         </label>
                         <label>
                             <input type="radio" id="profile3" name="profile" value="../assets/profile-images/Ellipse -8.png">
-                            <img class="profile" id="image3" src="../Assets/profile-images/Ellipse -8.png">
+                            <img class="profile" id="image3" src="../assets/profile-images/Ellipse -8.png">
                         </label>
                         <label>
                             <input type="radio" id="profile4" name="profile" value="../assets/profile-images/Ellipse -7.png">
-                            <img class="profile" id="image4" src="../Assets/profile-images/Ellipse -7.png">
+                            <img class="profile" id="image4" src="../assets/profile-images/Ellipse -7.png">
                         </label>
                     </div>
                 </div>
+                <!--UC 4-->
                 <div class="row-content">
                     <label class="label text" for="gender">Gender</label>
                     <div>
@@ -63,15 +70,15 @@
                 <div class="row-content">
                     <label class="label text" for="department">Department</label>
                     <div>
-                        <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
+                        <input class="checkbox" type="checkbox" id="hr" name="department" value="HR">
                         <label class="text" for="hr">HR</label>
-                        <input class="checkbox" type="checkbox" id="sales" name="sales" value="Sales">
+                        <input class="checkbox" type="checkbox" id="sales" name="department" value="Sales">
                         <label class="text" for="sales">Sales</label>
-                        <input class="checkbox" type="checkbox" id="finance" name="finance" value="Finance">
+                        <input class="checkbox" type="checkbox" id="finance" name="department" value="Finance">
                         <label class="text" for="finance">Finance</label>
-                        <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="Engineer">
+                        <input class="checkbox" type="checkbox" id="engineer" name="department" value="Engineer">
                         <label class="text" for="engineer">Engineer</label>
-                        <input class="checkbox" type="checkbox" id="others" name="others" value="Others">
+                        <input class="checkbox" type="checkbox" id="others" name="department" value="Others">
                         <label class="text" for="others">Others</label>
                     </div>
                 </div>
@@ -80,9 +87,10 @@
                     <input class="input" type="range" name="salary" id="salary" min="300000" max="5000000" step="100" value="4000000" required>
                     <output class="salary-output" for="salary">4000000</output>
                 </div>
+                <!--UC 5-->
                 <div class="row-content">
                     <label class="label text" for="startDate">Start Date</label>
-                    <div>
+                    <div id="date">
                         <select id="day" name="Day">
                             <option value="Day">Day</option>
                             <option value='01'>01</option>
@@ -142,14 +150,16 @@
                             <option value='2016'>2016</option>
                         </select>
                     </div>
-                    <error-output class="date-error" for="startDate"></error-output>
+                    <!--UC 10-->
+                    <error-output class="date-error" for="text"></error-output>
                 </div>  
+                <!--UC 6-->
                 <div class="row-content">
                     <label class="label text" for="notes">Notes</label>
                     <textarea id="notes" class="input" name="Notes" style="height:100px;"></textarea>
                 </div>   
                 <div class="buttonParent">
-                    <a href="./home.html" class="resetButton button cancelButton">Cancel</a>
+                    <a href="./index.html" class="resetButton button cancelButton">Cancel</a>
                     <div class="submit-reset">
                         <button type="submit" class="button submitButton" id="submitButton">Submit</button>
                         <button type="reset" class="resetButton button" id="resetButton">Reset</button>
