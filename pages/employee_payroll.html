@@ -24,7 +24,7 @@
         <br>
         <div class="form-content">
           
-            <form class="form" action="#" onreset="resetForm()" onsubmit="save()">
+            <form class="form" action="#" onreset="resetForm()" onsubmit="save(event)">
                 <div class="form-head">
                     Employee Payroll Form
                 </div>
@@ -150,7 +150,7 @@
                         </select>
                     </div>
                   
-                    <error-output class="date-error" for="text"></error-output>
+                    <error-output class="date-error" for="startDate"></error-output>
                 </div>  
                
                 <div class="row-content">
